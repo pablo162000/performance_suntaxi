@@ -16,7 +16,7 @@ Requisitos
 ----------------------------------------------------
 Ejecución de la prueba
 ----------------------------------------------------
-1. Abrir una terminal en la raíz del proyecto.
+1. Abrir una terminal CMD en la raíz del proyecto.
 2. Ejecutar el siguiente comando:
 
    k6 run --summary-export=reports/summary.json scripts/login.js
