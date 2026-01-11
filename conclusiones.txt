@@ -1,0 +1,37 @@
+Conclusiones de la prueba de performance
+
+Se ejecutó una prueba de carga sobre el endpoint POST /auth/login utilizando k6,
+manteniendo una tasa constante de 20 transacciones por segundo (TPS) durante
+un período de 3 minutos.
+----------------------------------------------------
+Resultados obtenidos:
+----------------------------------------------------
+
+- Total de requests ejecutados: 3601
+- Throughput promedio: ~19.96 requests/segundo (≈ 20 TPS)
+- Error rate: 0.00%
+- Tiempo de respuesta promedio: 357.92 ms
+- Percentil 95 (p95): 382.94 ms
+- Tiempo máximo observado: 790.69 ms
+----------------------------------------------------
+Validaciones funcionales:
+----------------------------------------------------
+- El endpoint respondió con HTTP 201 en el 100% de las solicitudes exitosas.
+- En todas las respuestas se validó correctamente la presencia del token.
+- El 100% de los checks definidos fueron exitosos.
+----------------------------------------------------
+Conclusión final:
+----------------------------------------------------
+El sistema cumple con los criterios establecidos para la prueba de performance,
+manteniendo la carga solicitada de 20 TPS de forma estable, sin errores y con
+tiempos de respuesta muy por debajo del límite máximo de 1.5 segundos definido
+en los requerimientos.
+----------------------------------------------------
+Recomendaciones:
+----------------------------------------------------
+
+- El comportamiento observado indica que el endpoint puede manejar la carga
+  solicitada sin degradación.
+- Para evaluaciones futuras, se recomienda ejecutar pruebas con mayores niveles
+  de TPS o pruebas de mayor duración para identificar el punto de saturación
+  del servicio.
